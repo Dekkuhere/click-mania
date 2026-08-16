@@ -10,13 +10,29 @@ type ScoresTable = {
 };
 
 type Database = {
+  __InternalSupabase: {
+    PostgrestVersion: "14.15";
+  };
   public: {
     Tables: {
       scores: {
         Row: ScoresTable;
-        Insert: Pick<ScoresTable, "player_name" | "score">;
+        Insert: { player_name: string; score: number };
         Update: never;
+        Relationships: never[];
       };
+    };
+    Views: {
+      [_ in never]: never;
+    };
+    Functions: {
+      [_ in never]: never;
+    };
+    Enums: {
+      [_ in never]: never;
+    };
+    CompositeTypes: {
+      [_ in never]: never;
     };
   };
 };
