@@ -61,8 +61,13 @@ const saveScoreInput = z.object({
   score: z.number().int().min(0),
 });
 
+const saveScoreInput = z.object({
+  playerName: z.string().min(1).max(20),
+  score: z.number().int().min(0),
+});
+
 export const saveScore = createServerFn({ method: "POST" })
-  .inputValidator((data: { playerName: string; score: number }) => saveScoreInput.parse(data))
+  .validator((data: { playerName: string; score: number }) => saveScoreInput.parse(data))
   .handler(async ({ data }) => {
     const supabase = createPublishableClient();
     const { error } = await supabase
