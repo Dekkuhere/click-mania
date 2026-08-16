@@ -140,6 +140,11 @@
   --sidebar-accent-foreground: oklch(0.984 0.003 247.858);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.551 0.027 264.364);
+  --game-bg: oklch(1 0 0);
+  --game-fg: oklch(0.22 0 0);
+  --game-primary: oklch(0.72 0.26 145);
+  --game-border: oklch(0.22 0 0);
+  --font-game: "Press Start 2P", monospace;
 }
 
 @layer base {
