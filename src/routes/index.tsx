@@ -130,7 +130,7 @@ function Index() {
         <div className="w-full border-2 border-game-border bg-game-bg p-5">
           <div className="mb-4 flex justify-between text-xs">
             <span>TIME LEFT: {timeLeft}</span>
-            <span>SCORE: {score}</span>
+            <span id="game-score">SCORE: {score}</span>
           </div>
 
           <div className="relative aspect-[4/5] w-full overflow-hidden bg-game-bg">
